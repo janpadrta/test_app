@@ -1,0 +1,34 @@
+      Prefix Verb   URI Pattern                  Controller#Action
+       items GET    /items(.:format)             items#index
+             POST   /items(.:format)             items#create
+    new_item GET    /items/new(.:format)         items#new
+   edit_item GET    /items/:id/edit(.:format)    items#edit
+        item GET    /items/:id(.:format)         items#show
+             PATCH  /items/:id(.:format)         items#update
+             PUT    /items/:id(.:format)         items#update
+             DELETE /items/:id(.:format)         items#destroy
+       deeds GET    /deeds(.:format)             deeds#index
+             POST   /deeds(.:format)             deeds#create
+    new_deed GET    /deeds/new(.:format)         deeds#new
+   edit_deed GET    /deeds/:id/edit(.:format)    deeds#edit
+        deed GET    /deeds/:id(.:format)         deeds#show
+             PATCH  /deeds/:id(.:format)         deeds#update
+             PUT    /deeds/:id(.:format)         deeds#update
+             DELETE /deeds/:id(.:format)         deeds#destroy
+    variants GET    /variants(.:format)          variants#index
+             POST   /variants(.:format)          variants#create
+ new_variant GET    /variants/new(.:format)      variants#new
+edit_variant GET    /variants/:id/edit(.:format) variants#edit
+     variant GET    /variants/:id(.:format)      variants#show
+             PATCH  /variants/:id(.:format)      variants#update
+             PUT    /variants/:id(.:format)      variants#update
+             DELETE /variants/:id(.:format)      variants#destroy
+    products GET    /products(.:format)          products#index
+             POST   /products(.:format)          products#create
+ new_product GET    /products/new(.:format)      products#new
+edit_product GET    /products/:id/edit(.:format) products#edit
+     product GET    /products/:id(.:format)      products#show
+             PATCH  /products/:id(.:format)      products#update
+             PUT    /products/:id(.:format)      products#update
+             DELETE /products/:id(.:format)      products#destroy
+        root GET    /                            products#index
