@@ -3,6 +3,8 @@ require 'test_helper'
 class DeedsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @deed = deeds(:one)
+    @product = products(:one)
+    @variant = variants(:one)
   end
 
   test "should get index" do

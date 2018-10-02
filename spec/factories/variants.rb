@@ -9,12 +9,8 @@
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  product_id: 1
-
-two:
-  name: MyString
-  product_id: 1
+FactoryGirl.define do
+  factory :variant do
+    product
+  end
+end

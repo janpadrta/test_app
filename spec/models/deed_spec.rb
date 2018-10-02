@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: products
+# Table name: deeds
 #
 #  id         :integer          not null, primary key
 #  name       :string
@@ -8,10 +8,8 @@
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'rails_helper'
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+RSpec.describe Deed, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

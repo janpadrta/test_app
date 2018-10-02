@@ -42,6 +42,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails'
+  gem 'assert_difference'
 end
 
 group :development do
