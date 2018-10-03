@@ -1,22 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe VariantsController, type: :controller do
-  it "should renders the index template" do
-    get :index
-    expect(response).to render_template("index")
-  end
-
-  it "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  it "should get edit" do
-    variant = FactoryGirl.create(:variant)
-    get :edit, params: { id: variant.id }
-    assert_response :success
-  end
-
   it "should create variant" do
     product = FactoryGirl.create(:product)
     assert_difference('Variant.count') do

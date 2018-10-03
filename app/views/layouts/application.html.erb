@@ -11,6 +11,10 @@
   <body>
     <%= render 'layouts/menu' %>
 
+    <% %w[notice alert].each do |type| %>
+      <p id="<%= type %>"><%= send(type) %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

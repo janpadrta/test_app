@@ -10,7 +10,7 @@ class DeedsController < ApplicationController
   # GET /deeds/1
   # GET /deeds/1.json
   def show
-    @variants = Variant.where.not(id: @deed.items.pluck(:variant_id))
+    @variants = Variant.all
   end
 
   # GET /deeds/new

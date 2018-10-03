@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
 <% title "Deed #{@deed.name}" %>
 
 <table>
   <tr>
-    <th><strong>Name:</strong></th>
+    <th><strong>Deed name:</strong></th>
     <th><%= @deed.name %></th>
+    <th></th>
   </tr>
   <tr>
-    <td>Variants:</td>
+    <td>Items:</td>
     <td>
       <%= form_for Item.new do |f| %>
         <%= f.hidden_field :deed_id, value: @deed.id %>
+        <%= f.text_field :name %>
         <%= f.select :variant_id, options_from_collection_for_select(@variants, 'id', 'name_with_detail') %>
         <%= f.submit %>
       <% end %>
     </td>
+    <td></td>
   </tr>
   <% @deed.items.includes(:variant).each do |item| %>
     <tr>
-      <td><%= link_to item.variant.name_with_detail, product_path(item.variant.product, variant_highlight: item.variant) %></td>
+      <td><%= link_to item.name, product_path(item.variant.product, variant_highlight: item.variant) %></td>
+      <td><%= item.variant.name_with_detail %></td>
       <td><%= link_to('Remove', item_path(item), method: :delete) %></td>
     </tr>
   <% end %>

@@ -1,22 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
-  it "should renders the index template" do
-    get :index
-    expect(response).to render_template("index")
-  end
-
-  it "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  it "should get edit" do
-    item = FactoryGirl.create(:item)
-    get :edit, params: { id: item.id }
-    assert_response :success
-  end
-
   it "should create item" do
     deed = FactoryGirl.create(:deed)
     variant = FactoryGirl.create(:variant)

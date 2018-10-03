@@ -13,6 +13,8 @@ class Variant < ApplicationRecord
   belongs_to :product
   has_many :items, dependent: :destroy
 
+  validates_uniqueness_of :name, scope: :product_id
+
   def name_with_detail
     "#{product_name} - #{name}"
   end
