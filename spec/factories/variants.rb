@@ -11,6 +11,7 @@
 
 FactoryGirl.define do
   factory :variant do
+    name 'Variant One'
     product
   end
 end

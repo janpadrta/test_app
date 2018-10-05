@@ -15,4 +15,5 @@ class Item < ApplicationRecord
   belongs_to :variant
 
   validates_uniqueness_of :name, scope: [:deed_id, :variant_id]
+  validates_presence_of :name
 end

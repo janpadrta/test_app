@@ -12,4 +12,5 @@ class Deed < ApplicationRecord
   has_many :items
 
   validates_uniqueness_of :name
+  validates_presence_of :name
 end

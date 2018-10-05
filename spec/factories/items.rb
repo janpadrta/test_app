@@ -12,6 +12,7 @@
 
 FactoryGirl.define do
   factory :item do
+    name 'Item One'
     deed
     variant
   end

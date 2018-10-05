@@ -12,4 +12,5 @@ class Product < ApplicationRecord
   has_many :variants, dependent: :destroy
 
   validates_uniqueness_of :name
+  validates_presence_of :name
 end

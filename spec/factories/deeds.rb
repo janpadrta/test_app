@@ -10,6 +10,6 @@
 
 FactoryGirl.define do
   factory :deed do
-    
+    name 'Deed One'
   end
 end

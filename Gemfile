@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_girl_rails'
   gem 'assert_difference'
+  gem 'shoulda'
 end
 
 group :development do
