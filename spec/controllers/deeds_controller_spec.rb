@@ -6,6 +6,12 @@ RSpec.describe DeedsController, type: :controller do
     expect(response).to render_template('index')
   end
 
+  it 'should get show' do
+    deed = FactoryGirl.create(:deed)
+    get :show, params: { id: deed.id }
+    assert_response :success
+  end
+
   it 'should get new' do
     get :new
     assert_response :success

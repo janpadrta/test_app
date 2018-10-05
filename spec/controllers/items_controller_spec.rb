@@ -5,6 +5,10 @@ RSpec.describe ItemsController, type: :controller do
     expect { get :index }.to raise_error(ActionController::UrlGenerationError)
   end
 
+  it 'should get show' do
+    expect { get :new }.to raise_error(ActionController::UrlGenerationError)
+  end
+
   it 'should get new' do
     expect { get :new }.to raise_error(ActionController::UrlGenerationError)
   end

@@ -1,4 +1,8 @@
 class VariantsController < ApplicationController
+  def show
+    @variant = Variant.find(params[:id])
+  end
+
   def create
     variant = Variant.new(variant_params)
 

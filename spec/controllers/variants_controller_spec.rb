@@ -4,9 +4,17 @@ RSpec.describe VariantsController, type: :controller do
   it 'should renders the index template' do
     expect { get :index }.to raise_error(ActionController::UrlGenerationError)
   end
+
+  it 'should get show' do
+    variant = FactoryGirl.create(:variant)
+    get :show, params: { id: variant.id }
+    assert_response :success
+  end
+
   it 'should get new' do
     expect { get :new }.to raise_error(ActionController::UrlGenerationError)
   end
+
   it 'should get edit' do
     variant = FactoryGirl.create(:variant)
     expect { get :edit, params: { id: variant.id } }.to raise_error(ActionController::UrlGenerationError)
